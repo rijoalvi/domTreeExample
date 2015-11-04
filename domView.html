@@ -4,162 +4,11 @@
         <title>Live DOM Viewer</title>
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
         <style>
-            code, pre, li, p {
-                font-size: 18px;
-            }
-            p,
-            ul,
-            pre {
-                margin: 0;
-            }
-
-            pre {
-                border: inset thin;
-                padding: 0.5em;
-                color: gray;
-            }
-            pre samp {
-                color: black;
-            }
             #wrapper {
                 height: 100%;
-                
-            }
-            #domtree-wrapper {
-                border: inset thin;
-                padding: 1%;
-                color: black;
-                min-height: 5em;
-                font-family: monospace;
-                background: white;
-                width: 47.5%;
-                height: 100%;
-                float: right;
-                overflow-x: scroll;
-            }
-            #dom .t1 code {
-                color: purple;
-                font-weight: bold;
-            }
-            #dom .t2 {
-                font-style: normal;
-                font-family: monospace;
-            }
-            #dom .t2 .name {
-                color: black;
-                font-weight: bold;
-            }
-            #dom .t2 .value {
-                color: blue;
-                font-weight: normal;
-            }
-            #dom .t3 code,
-            #dom .t4 code,
-            #dom .t5 code {
-                color: gray;
-            }
-            #dom .t7 code,
-            #dom .t8 code {
-                color: green;
-            }
-            #dom span {
-                font-style: italic;
-                font-family: serif;
-            }
-            #dom .t10 code {
-                color: teal;
-            }
-            #dom .misparented,
-            #dom .misparented code {
-                color: red;
-                font-weight: bold;
-            }
-            #dom .unnamed {
-                color: red;
-                font-style: italic;
-            }
-            pre#log {
-                color: black;
-                font: small monospace;
-            }
-            script + p {
-                border: none;
-                font-size: smaller;
-                margin: 0.8em 0.25em 0.1em;
-            }
-            script + p + details {
-                font-size: smaller;
-                margin: 0 0.25em;
-            }
-            script + p + details dl {
-                margin: 0 0 0 1.5em;
-            }
-            script + p + details dl dd {
-                margin: 0 0 0.35em 1em;
             }
         </style>
-        <style title="Tree View">
-            #dom li:first-child::before { position: absolute; top: 0; height: 0.6em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
-            #dom li:not(:last-child)::after { position: absolute; top: 0; bottom: -0.6em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
-            #source-code-wrapper {
-                float: left;
-                border: inset thin; 
-                padding: 1%;
-                color: black;
-                width: 47.5%;
-                overflow-x: scroll;
-                
-            }
-            
-            .treeView{
-                -moz-user-select:none;
-                position:relative;
-            }
-
-            .treeView ul{
-                padding:0 0 0 1.5em;
-            }
-
-            .treeView ul ul{
-                background:url(http://code.stephenmorley.org/javascript/collapsible-lists/list-item-contents.png) repeat-y left;
-            }
-
-            .treeView li.lastChild > ul{
-                background-image:none;
-            }
-
-            .treeView li{
-                margin:0;
-                padding:0;
-                background:url(http://code.stephenmorley.org/javascript/collapsible-lists/list-item-root.png) no-repeat top left;
-                list-style-position:inside;
-                list-style-image:url(http://code.stephenmorley.org/javascript/collapsible-lists/button.png);
-                cursor:auto;
-            }
-
-            .treeView li.collapsibleListOpen{
-                list-style-image:url(http://code.stephenmorley.org/javascript/collapsible-lists/button-open.png);
-                cursor:pointer;
-            }
-
-            .treeView li.collapsibleListClosed{
-                list-style-image:url(http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png);
-                cursor:pointer;
-            }
-
-            .treeView li li{
-                background-image:url(http://code.stephenmorley.org/javascript/collapsible-lists/list-item.png);
-                padding-left:1.5em;
-            }
-
-            .treeView li.lastChild{
-                background-image:url(http://code.stephenmorley.org/javascript/collapsible-lists/list-item-last.png);
-            }
-
-            .treeView li.collapsibleListOpen.lastChild{
-                background-image:url(http://code.stephenmorley.org/javascript/collapsible-lists/list-item-last-open.png);
-            }
-        </style>
+        <link type="text/css" rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <div id="wrapper" class="treeView">
@@ -377,7 +226,7 @@
                 </li>
             </ul>
         </div>
-        <script type="text/javascript" src="http://code.stephenmorley.org/javascript/collapsible-lists/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
         <script>
             if (navigator.userAgent.match('Gecko/(\\d+)') && RegExp.$1 == '20060217' && RegExp.$1 != '00000000') {
               var style = document.getElementsByTagName('style')[1];
